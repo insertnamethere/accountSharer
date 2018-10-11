@@ -29,14 +29,14 @@ String Password (hashed)
 [\<TimeSlot object id\>] Array of TimeSlots the user has made  
 
 #### Schedule
-\<User object id>\ Schedule owner  
-[TimeSlot] User created request time windows  
+\<User object id\> Schedule owner  
+[\<TimeSlot\>] User created request time windows  
 
 #### TimeSlot
 <User object id> TimeSlot owner  
 Date TimeStart  
 Date TimeEnd  
-\<Schedule object id> Schedule the TimeSlot is a part of  
+\<Schedule object id\> Schedule the TimeSlot is a part of  
 
 
 ## Video Walkthrough
