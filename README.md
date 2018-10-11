@@ -14,6 +14,7 @@ Time spent: **X** hours spent in total
 The following **stretch** features are implemented:
 
 - [ ] make it look nice with animations and transitions and themes
+- [ ] prevent users from overlapping their own times/other times
 
 The following **additional** features are implemented:
 
@@ -24,6 +25,8 @@ The following **additional** features are implemented:
 #### User
 String Username
 String Password (hashed)
+[<Schedule object id>] Array of schedules the user owns
+[<TimeSlot object id>] Array of TimeSlots the user has made 
 
 #### Schedule
 <User object id> Schedule owner
