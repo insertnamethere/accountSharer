@@ -19,6 +19,23 @@ The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
+## Parse Model
+
+#### User
+String Username
+String Password (hashed)
+
+#### Schedule
+<User object id> Schedule owner
+[TimeSlot] User created request time windows
+
+#### TimeSlot
+<User object id> TimeSlot owner
+Date TimeStart
+Date TimeEnd
+<Schedule object id> Schedule the TimeSlot is a part of
+
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
