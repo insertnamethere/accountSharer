@@ -30,7 +30,7 @@ String Password (hashed)
 
 #### Schedule
 \<User object id\> Schedule owner  
-[\<TimeSlot\>] User created request time windows  
+[\<TimeSlot object id\>] User created request time windows  
 
 #### TimeSlot
 <User object id> TimeSlot owner  
