@@ -6,15 +6,15 @@ Time spent: **X** hours spent in total
 
 ## User Stories
 
-- [ ] Have user accounts
-- [ ] log in/log out/persisted user
-- [ ] submit a time-slot request
-- [ ] show schedule for an account
+- [x] Have user accounts
+- [x] log in/log out/persisted user
+- [x] submit a time-slot request
+- [x] show schedule for an account
 
 The following **stretch** features are implemented:
 
 - [ ] make it look nice with animations and transitions and themes
-- [ ] prevent users from overlapping their own times/other times
+- [x] prevent users from overlapping their own times/other times
 
 The following **additional** features are implemented:
 
@@ -25,12 +25,10 @@ The following **additional** features are implemented:
 #### User
 String Username  
 String Password (hashed)  
-[\<Schedule object id\>] Array of schedules the user owns  
-[\<TimeSlot object id\>] Array of TimeSlots the user has made  
 
 #### Schedule
 \<User object id\> Schedule owner  
-[\<TimeSlot object id\>] User created request time windows  
+String type
 
 #### TimeSlot
 <User object id> TimeSlot owner  
@@ -44,6 +42,8 @@ Date TimeEnd
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/insertorgnamehere/accountSharer/blob/master/images/IMG_0146.JPG' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='https://github.com/insertorgnamehere/accountSharer/blob/master/images/gifs/done.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
