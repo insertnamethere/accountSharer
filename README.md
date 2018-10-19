@@ -14,16 +14,36 @@ Time spent: **X** hours spent in total
 The following **stretch** features are implemented:
 
 - [ ] make it look nice with animations and transitions and themes
+- [ ] prevent users from overlapping their own times/other times
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
+## Parse Model
+
+#### User
+String Username  
+String Password (hashed)  
+[\<Schedule object id\>] Array of schedules the user owns  
+[\<TimeSlot object id\>] Array of TimeSlots the user has made  
+
+#### Schedule
+\<User object id\> Schedule owner  
+[\<TimeSlot object id\>] User created request time windows  
+
+#### TimeSlot
+<User object id> TimeSlot owner  
+Date TimeStart  
+Date TimeEnd  
+\<Schedule object id\> Schedule the TimeSlot is a part of  
+
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/insertorgnamehere/accountSharer/blob/master/images/IMG_0146.JPG' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
