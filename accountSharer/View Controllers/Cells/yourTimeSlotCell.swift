@@ -16,7 +16,7 @@ class yourTimeSlotCell: UITableViewCell {
 
     var timeSlot: TimeSlot! {
         didSet {
-            self.scheduleLabel.text = timeSlot.owner.username! + "'s " + timeSlot.schedule.type
+            self.scheduleLabel.text = timeSlot.schedule.owner.username! + "'s " + timeSlot.schedule.type
             self.timeStartLabel.text = timeSlot.timeStart.toString(dateFormat: "dd-MM h:MM a")
             self.timeEndLabel.text = timeSlot.timeEnd.toString(dateFormat: "dd-MM h:mm a")
         }

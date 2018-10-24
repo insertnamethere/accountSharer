@@ -67,6 +67,7 @@ class APIManager {
         let query = TimeSlot.query()
         query?.includeKey("owner")
         query?.includeKey("schedule")
+        query?.includeKey("schedule.owner")
         query?.whereKey("owner", equalTo: user)
         query?.addAscendingOrder("schedule")
         query?.findObjectsInBackground(block: completion)
