@@ -49,6 +49,18 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
+Pedro's assigned work
+structure and create the Parse model back-end
+initilize Parse for Heruko
+
+Will's assigned work
+Create main structure of app
+Design the workflow of pages and what connects to which page
+
+Kaila's assigned work
+go to each page and create the necessary views
+complete each page to get each page functional for the app
+
 
 
 ## Credits
