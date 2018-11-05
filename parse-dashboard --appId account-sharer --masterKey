@@ -1,0 +1,1 @@
+parse-dashboard --appId account-sharer --masterKey myMasterKey --serverURL "https://account-sharer.herokuapp.com/parse"

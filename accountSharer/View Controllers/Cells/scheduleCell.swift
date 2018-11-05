@@ -10,11 +10,13 @@ import UIKit
 
 class scheduleCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeIcon: UIImageView!
     
     
     var schedule: Schedule! {
         didSet {
             self.typeLabel.text = schedule.type
+            self.typeIcon.image = UIImage(named: schedule.type) ?? UIImage(named: "background")
         }
     }
 

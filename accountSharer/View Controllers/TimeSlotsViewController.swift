@@ -27,7 +27,6 @@ class TimeSlotsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func getTimeSlots() {
         APIManager.getTimeSlots(user: PFUser.current()!) { (result: [PFObject]?, error: Error?) in
-            print(result)
             if let result = result {
                 self.timeSlots = result as! [TimeSlot]
                 self.tableView.reloadData()
