@@ -13,12 +13,14 @@ class yourTimeSlotCell: UITableViewCell {
     @IBOutlet weak var timeEndLabel: UILabel!
     @IBOutlet weak var timeStartLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
-
+    @IBOutlet weak var typeIcon: UIImageView!
+    
     var timeSlot: TimeSlot! {
         didSet {
             self.scheduleLabel.text = timeSlot.schedule.owner.username! + "'s " + timeSlot.schedule.type
-            self.timeStartLabel.text = timeSlot.timeStart.toString(dateFormat: "dd-MM h:MM a")
-            self.timeEndLabel.text = timeSlot.timeEnd.toString(dateFormat: "dd-MM h:mm a")
+            self.timeStartLabel.text = timeSlot.timeStart.toString(dateFormat: "dd-MM hh:MM a")
+            self.timeEndLabel.text = timeSlot.timeEnd.toString(dateFormat: "dd-MM hh:mm a")
+            self.typeIcon.image = UIImage(named: timeSlot.schedule.type) ?? UIImage(named: "background")
         }
     }
     override func awakeFromNib() {

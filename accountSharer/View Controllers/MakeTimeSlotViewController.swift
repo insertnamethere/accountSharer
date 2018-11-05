@@ -15,6 +15,7 @@ class MakeTimeSlotViewController: UIViewController {
     @IBOutlet weak var dateStartPicker: UIDatePicker!
     @IBOutlet weak var dateEndPicker: UIDatePicker!
     var schedule: Schedule!
+    var myTimeSlots: [TimeSlot] = []
     var timeSlots: [TimeSlot] = []
     var timeSlot: TimeSlot!
     override func viewDidLoad() {
