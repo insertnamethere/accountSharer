@@ -24,6 +24,10 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.dataSource = self
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.getSchedules()
     }
