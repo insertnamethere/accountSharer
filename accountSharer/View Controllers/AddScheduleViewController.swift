@@ -52,8 +52,18 @@ class AddScheduleViewController: UITableViewController {
     
     @objc func save(_ sender: Any) {
         APIManager.makeNewSchedule(type: mySched)
+        self.performSegue(withIdentifier: "toSchedules", sender: nil)
     }
 
-
+    @IBAction func timeLimit(_ sender: Any) {
+        //apimanager stuff
+    
+    }
+    
+    @IBAction func offLimitHours(_ sender: Any) {
+        //apimanagerstuff
+        
+    }
+    
 
 }

@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-Rt-Mkn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeSlotCell" rowHeight="171" id="03R-kS-Pue" customClass="timeSlotCell" customModule="accountSharer" customModuleProvider="target">
@@ -244,19 +244,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bjd-kV-z8N">
-                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="561535912.621997">
                                     <!--2018-10-18 06:11:52 +0000-->
                                 </date>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-Bd-2Sd">
-                                <rect key="frame" x="0.0" y="288" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="244" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="561535912.621997">
                                     <!--2018-10-18 06:11:52 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7M-nP-INQ">
-                                <rect key="frame" x="303" y="520" width="56" height="30"/>
+                                <rect key="frame" x="303" y="476" width="56" height="30"/>
                                 <state key="normal" title="Reserve"/>
                                 <connections>
                                     <action selector="reservePressed:" destination="Gpe-VC-6Ei" eventType="touchUpInside" id="B25-UA-JCs"/>
@@ -494,12 +494,17 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Limit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-6A-ZIk">
                                                     <rect key="frame" x="16" y="11" width="80" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="TsG-b3-2tU" appends="YES" id="WYj-0O-Uos"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="188-bi-nt5">
                                         <rect key="frame" x="0.0" y="276" width="375" height="44"/>
@@ -517,6 +522,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2o3-fL-GL2" appends="YES" id="qyK-7K-Yy8"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y2r-bb-Nlc">
                                         <rect key="frame" x="0.0" y="320" width="375" height="44"/>
@@ -536,8 +545,21 @@
                     </tableView>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="b1A-uC-mkf" kind="show" identifier="toSchedules" id="FEY-45-yCJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbJ-Ix-lvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TsG-b3-2tU">
+                    <connections>
+                        <action selector="timeLimit:" destination="4a7-If-HrH" id="36u-0S-HeR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2o3-fL-GL2">
+                    <connections>
+                        <action selector="offLimitHours:" destination="4a7-If-HrH" id="9Ho-w0-oM0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4484" y="967.4662668665668"/>
         </scene>
@@ -779,6 +801,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L68-rE-6xY"/>
-        <segue reference="YF2-6P-vca"/>
+        <segue reference="FEY-45-yCJ"/>
     </inferredMetricsTieBreakers>
 </document>
