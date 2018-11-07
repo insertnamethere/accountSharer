@@ -25,7 +25,8 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+        print(indexPath
+        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,4 +71,8 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.schedule = schedule
         return cell
     }
+    
+  
+    
+    
 }
