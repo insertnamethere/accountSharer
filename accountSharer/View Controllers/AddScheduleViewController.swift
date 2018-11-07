@@ -18,6 +18,7 @@ class AddScheduleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,7 +32,7 @@ class AddScheduleViewController: UITableViewController {
         }
         return 2
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryType = .none
         tableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryType = .none
@@ -42,7 +43,17 @@ class AddScheduleViewController: UITableViewController {
         cell?.accessoryType = .checkmark
         tableView.reloadData()
         
+        
+        myIndex = indexPath.row
+        mySched = schedTypes[myIndex]
+     
+        
     }
+    
+    @objc func save(_ sender: Any) {
+        APIManager.makeNewSchedule(type: mySched)
+    }
+
 
 
 }
