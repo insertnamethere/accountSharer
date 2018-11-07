@@ -46,6 +46,14 @@ class APIManager {
         query?.findObjectsInBackground(block: completion)
     }
     
+    class func delSchedules(schedule: Schedule, completion: @escaping (Bool?, Error?) -> ()) {
+        let query = Schedule.query()
+        query?.getObjectInBackground(withId: schedule.objectId!) {
+            (scheduleDelete: PFObject?, error: Error?) -> Void in
+                scheduleDelete?.deleteInBackground(block: completion)
+        }
+    }
+    
     class func getResults(searchString: String, completion: @escaping ([PFObject]?, Error?) -> ()) {
         let query = PFUser.query()
         query?.includeKey("username_lc")
