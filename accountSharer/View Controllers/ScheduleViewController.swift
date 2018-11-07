@@ -15,16 +15,23 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     var schedules: [Schedule] = []
     var selectedSchedule: Schedule!
     var user: PFUser = PFUser.current()!
+    var editting = false;
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editMode))
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.getSchedules()
+    }
+    
+    @objc func editMode() {
+        self.editting = !self.editting
+        self.navigationItem.leftBarButtonItem?.title = editting ? "Done" : "Edit"
+        self.tableView.setEditing(editting, animated: true)
     }
     
     func getSchedules() {
