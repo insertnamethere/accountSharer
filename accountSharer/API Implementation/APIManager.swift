@@ -50,7 +50,15 @@ class APIManager {
         let query = Schedule.query()
         query?.getObjectInBackground(withId: schedule.objectId!) {
             (scheduleDelete: PFObject?, error: Error?) -> Void in
-                scheduleDelete?.deleteInBackground(block: completion)
+            let timeSlotQuery = TimeSlot.query()
+            timeSlotQuery?.whereKey("schedule", equalTo: scheduleDelete!)
+            timeSlotQuery?.findObjectsInBackground() {
+                (timeSlots: [PFObject]?, error: Error?) -> Void in
+                for timeSlot in timeSlots! {
+                    timeSlot.deleteInBackground()
+                }
+            }
+            scheduleDelete?.deleteInBackground(block: completion)
         }
     }
     
@@ -81,6 +89,14 @@ class APIManager {
         query?.findObjectsInBackground(block: completion)
     }
     
+    class func delTimeSlot(timeSlot: TimeSlot, completion: @escaping (Bool?, Error?) -> ()) {
+        let query = TimeSlot.query()
+        query?.getObjectInBackground(withId: timeSlot.objectId!) {
+            (timeSlotDelete: PFObject?, error: Error?) -> Void in
+            timeSlotDelete?.deleteInBackground(block: completion)
+        }
+    }
+    
     class func addTimeSlots(timeSlot: TimeSlot, withCompletion completion: PFBooleanResultBlock?) {
         timeSlot.saveInBackground(block: completion)
     }
@@ -105,6 +121,6 @@ class APIManager {
         // add the OK action to the alert controller
         alertController.addAction(OKAction)
         
-        controller.present(alertController, animated: true, completion: nil)
+        controller.present(alertController, animated: true, completion: completion)
     }
 }
