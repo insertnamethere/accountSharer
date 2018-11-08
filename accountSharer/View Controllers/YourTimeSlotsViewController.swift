@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class TimeSlotsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YourTimeSlotsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var timeSlots: [TimeSlot] = []
@@ -44,7 +44,7 @@ class TimeSlotsViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeSlots.count
     }

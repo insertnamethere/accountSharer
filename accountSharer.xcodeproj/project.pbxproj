@@ -18,7 +18,6 @@
 		B78913412176AB8F00CB5F05 /* accountSharerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78913402176AB8F00CB5F05 /* accountSharerTests.swift */; };
 		B789134C2176AB8F00CB5F05 /* accountSharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789134B2176AB8F00CB5F05 /* accountSharerUITests.swift */; };
 		B78B4F192177DD650018C449 /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F182177DD650018C449 /* scheduleCell.swift */; };
-		B78B4F1D2177DF3E0018C449 /* TimeSlotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F1C2177DF3E0018C449 /* TimeSlotsViewController.swift */; };
 		B78B4F1F2177DFFF0018C449 /* AddScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F1E2177DFFF0018C449 /* AddScheduleViewController.swift */; };
 		B78B4F212177E1A10018C449 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F202177E1A10018C449 /* APIManager.swift */; };
 		B78B4F232177E2B80018C449 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F222177E2B80018C449 /* SettingsTableViewController.swift */; };
@@ -30,6 +29,7 @@
 		B78B4F38217858280018C449 /* timeSlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F37217858280018C449 /* timeSlotCell.swift */; };
 		B78B4F3A21785A990018C449 /* MakeTimeSlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F3921785A990018C449 /* MakeTimeSlotViewController.swift */; };
 		B78B4F7621794B300018C449 /* yourTimeSlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F7521794B300018C449 /* yourTimeSlotCell.swift */; };
+		B7F941E72193F846007D73C7 /* YourTimeSlotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F941E62193F846007D73C7 /* YourTimeSlotsViewController.swift */; };
 		E389EAD361C087F91B2676EF /* Pods_accountSharerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3E1D91C9CC3AACCB4403C1 /* Pods_accountSharerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,6 @@
 		B789134B2176AB8F00CB5F05 /* accountSharerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountSharerUITests.swift; sourceTree = "<group>"; };
 		B789134D2176AB8F00CB5F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B78B4F182177DD650018C449 /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
-		B78B4F1C2177DF3E0018C449 /* TimeSlotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotsViewController.swift; sourceTree = "<group>"; };
 		B78B4F1E2177DFFF0018C449 /* AddScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleViewController.swift; sourceTree = "<group>"; };
 		B78B4F202177E1A10018C449 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B78B4F222177E2B80018C449 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		B78B4F37217858280018C449 /* timeSlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeSlotCell.swift; sourceTree = "<group>"; };
 		B78B4F3921785A990018C449 /* MakeTimeSlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTimeSlotViewController.swift; sourceTree = "<group>"; };
 		B78B4F7521794B300018C449 /* yourTimeSlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourTimeSlotCell.swift; sourceTree = "<group>"; };
+		B7F941E62193F846007D73C7 /* YourTimeSlotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTimeSlotsViewController.swift; sourceTree = "<group>"; };
 		BF447756A796C72F400DDA3F /* Pods_accountSharerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_accountSharerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3E1D91C9CC3AACCB4403C1 /* Pods_accountSharerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_accountSharerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71823A8435646F7F2D8EB8B /* Pods-accountSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accountSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-accountSharer/Pods-accountSharer.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,11 +211,11 @@
 				B78B4F222177E2B80018C449 /* SettingsTableViewController.swift */,
 				B76848FA2176C01E00D18BE0 /* ScheduleViewController.swift */,
 				B78B4F1E2177DFFF0018C449 /* AddScheduleViewController.swift */,
-				B78B4F1C2177DF3E0018C449 /* TimeSlotsViewController.swift */,
 				B789132D2176AB8D00CB5F05 /* LoginViewController.swift */,
 				B78B4F3321783B360018C449 /* UserLookupViewController.swift */,
 				B78B4F35217856400018C449 /* ViewTimeSlotViewController.swift */,
 				B78B4F3921785A990018C449 /* MakeTimeSlotViewController.swift */,
+				B7F941E62193F846007D73C7 /* YourTimeSlotsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -460,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78B4F212177E1A10018C449 /* APIManager.swift in Sources */,
+				B7F941E72193F846007D73C7 /* YourTimeSlotsViewController.swift in Sources */,
 				B78B4F3421783B360018C449 /* UserLookupViewController.swift in Sources */,
 				B78B4F282177E8000018C449 /* TimeSlot.swift in Sources */,
 				B76848FB2176C01E00D18BE0 /* ScheduleViewController.swift in Sources */,
@@ -474,7 +475,6 @@
 				B78B4F7621794B300018C449 /* yourTimeSlotCell.swift in Sources */,
 				B78B4F2A2177E8100018C449 /* Schedule.swift in Sources */,
 				B78B4F38217858280018C449 /* timeSlotCell.swift in Sources */,
-				B78B4F1D2177DF3E0018C449 /* TimeSlotsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

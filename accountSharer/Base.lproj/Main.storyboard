@@ -578,10 +578,10 @@
             </objects>
             <point key="canvasLocation" x="1687" y="134"/>
         </scene>
-        <!--You Reserved Time Slots-->
+        <!--Your Reserved Time Slots-->
         <scene sceneID="n13-lw-X7N">
             <objects>
-                <viewController id="RjK-p4-QYv" customClass="TimeSlotsViewController" customModule="accountSharer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RjK-p4-QYv" customClass="YourTimeSlotsViewController" customModule="accountSharer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBU-N2-2QB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,7 +651,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jgb-Cl-jNd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="You Reserved Time Slots" id="wOa-x9-rBM">
+                    <navigationItem key="navigationItem" title="Your Reserved Time Slots" id="wOa-x9-rBM">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="gPN-Z4-QTg">
                             <connections>
                                 <segue destination="eWS-Cz-U7l" kind="show" id="LeY-QG-IFe"/>
@@ -795,7 +795,7 @@
         <image name="time_slot__1072043" width="87" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JJn-1p-UP0"/>
+        <segue reference="LeY-QG-IFe"/>
         <segue reference="mbQ-sP-uvU"/>
         <segue reference="FEY-45-yCJ"/>
     </inferredMetricsTieBreakers>
