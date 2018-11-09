@@ -56,8 +56,8 @@ class AddScheduleViewController: UITableViewController {
     }
 
     @IBAction func timeLimit(_ sender: Any) {
-        //apimanager stuff
-    
+        self.performSegue(withIdentifier: "toTimeLimit", sender: nil)
+        
     }
     
     @IBAction func offLimitHours(_ sender: Any) {

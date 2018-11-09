@@ -30,6 +30,7 @@
 		B78B4F38217858280018C449 /* timeSlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F37217858280018C449 /* timeSlotCell.swift */; };
 		B78B4F3A21785A990018C449 /* MakeTimeSlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F3921785A990018C449 /* MakeTimeSlotViewController.swift */; };
 		B78B4F7621794B300018C449 /* yourTimeSlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78B4F7521794B300018C449 /* yourTimeSlotCell.swift */; };
+		CEBE113621950AA5002AF4C4 /* timeLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE113521950AA5002AF4C4 /* timeLimitViewController.swift */; };
 		E389EAD361C087F91B2676EF /* Pods_accountSharerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3E1D91C9CC3AACCB4403C1 /* Pods_accountSharerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		B78B4F7521794B300018C449 /* yourTimeSlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourTimeSlotCell.swift; sourceTree = "<group>"; };
 		BF447756A796C72F400DDA3F /* Pods_accountSharerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_accountSharerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3E1D91C9CC3AACCB4403C1 /* Pods_accountSharerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_accountSharerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBE113521950AA5002AF4C4 /* timeLimitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeLimitViewController.swift; sourceTree = "<group>"; };
 		E71823A8435646F7F2D8EB8B /* Pods-accountSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-accountSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-accountSharer/Pods-accountSharer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 				B78B4F3321783B360018C449 /* UserLookupViewController.swift */,
 				B78B4F35217856400018C449 /* ViewTimeSlotViewController.swift */,
 				B78B4F3921785A990018C449 /* MakeTimeSlotViewController.swift */,
+				CEBE113521950AA5002AF4C4 /* timeLimitViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				B78B4F7621794B300018C449 /* yourTimeSlotCell.swift in Sources */,
 				B78B4F2A2177E8100018C449 /* Schedule.swift in Sources */,
 				B78B4F38217858280018C449 /* timeSlotCell.swift in Sources */,
+				CEBE113621950AA5002AF4C4 /* timeLimitViewController.swift in Sources */,
 				B78B4F1D2177DF3E0018C449 /* TimeSlotsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
