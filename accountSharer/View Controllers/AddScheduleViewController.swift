@@ -53,7 +53,26 @@ class AddScheduleViewController: UITableViewController {
     }
 
     @IBAction func timeLimit(_ sender: Any) {
-        self.performSegue(withIdentifier: "toTimeLimit", sender: nil)
+        let alert = UIAlertController(title: "time limit alert", message: "Set a time limit for your users", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: NSLocalizedString("Save", comment: "Default action"), style: .default, handler: { _ in
+            let textField = alert.textFields![0]
+            print (textField.text)
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        
+        alert.addTextField { (textField: UITextField) in
+            textField.keyboardAppearance = .dark
+            textField.keyboardType = .numberPad
+            textField.autocorrectionType = .default
+            textField.placeholder = "time limit"
+            textField.clearButtonMode = .whileEditing
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+      
         
     }
     

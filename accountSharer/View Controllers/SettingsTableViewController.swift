@@ -28,14 +28,8 @@ class SettingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-<<<<<<< HEAD
-        if (section == 0) {
-            return 1
-        }
-        return 0
-=======
+
         return 1
->>>>>>> f18bc25811c60090a21c6127e0b631c8e5db5caa
     }
 
     @IBAction func logoutPressed(_ sender: Any) {

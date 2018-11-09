@@ -30,9 +30,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-<<<<<<< HEAD
-        print(indexPath)
-=======
+
         let deleteThisSchedule = schedules[indexPath.row]
         APIManager.delSchedules(schedule: deleteThisSchedule) { (success: Bool?, error: Error?) in
             if (success!) {
@@ -47,7 +45,6 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
                 APIManager.showAlert(title: "Error", message: "Could not delete schedule. Try again", controller: self)
             }
         }
->>>>>>> f18bc25811c60090a21c6127e0b631c8e5db5caa
     }
     
     override func viewWillAppear(_ animated: Bool) {
