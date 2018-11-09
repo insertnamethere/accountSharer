@@ -57,6 +57,18 @@ class ViewTimeSlotViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        APIManager.delTimeSlot(timeSlot: timeSlots[indexPath.row])  { (success: Bool?, error: Error?) in
+            if (success!) {
+                self.timeSlots.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeSlots.count
     }

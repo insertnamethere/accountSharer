@@ -12,13 +12,13 @@ class AddScheduleViewController: UITableViewController {
 
     var schedTypes = ["Netflix", "Hulu", "Amazon", "Spotify"]
     var myIndex = 0
-    var mySched = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryType = .checkmark
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,14 +45,11 @@ class AddScheduleViewController: UITableViewController {
         
         
         myIndex = indexPath.row
-        mySched = schedTypes[myIndex]
-     
-        
     }
     
     @objc func save(_ sender: Any) {
-        APIManager.makeNewSchedule(type: mySched)
-        self.performSegue(withIdentifier: "toSchedules", sender: nil)
+        APIManager.makeNewSchedule(type: schedTypes[myIndex])
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func timeLimit(_ sender: Any) {

@@ -53,9 +53,7 @@ class MakeTimeSlotViewController: UIViewController {
                 print(error.localizedDescription)
                 APIManager.showAlert(title: error.localizedDescription, message: "", controller: self)
             } else {
-                APIManager.showAlert(title: "Success", message: "Time Slot Reserved", controller: self) {() in 
-                    _ = self.navigationController?.popViewController(animated: true)
-                }
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }

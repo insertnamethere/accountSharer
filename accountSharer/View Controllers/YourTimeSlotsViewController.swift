@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class TimeSlotsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YourTimeSlotsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var timeSlots: [TimeSlot] = []
@@ -33,7 +33,18 @@ class TimeSlotsViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        APIManager.delTimeSlot(timeSlot: timeSlots[indexPath.row])  { (success: Bool?, error: Error?) in
+            if (success!) {
+                self.timeSlots.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeSlots.count
     }
