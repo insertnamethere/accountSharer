@@ -18,13 +18,4 @@ class TimeSlot: PFObject, PFSubclassing {
     class func parseClassName() -> String {
         return "TimeSlot"
     }
-    
-    class func makeNewSchedule(schedule: Schedule, withCompletion completion: PFBooleanResultBlock?) {
-        let timeSlot = TimeSlot()
-        
-        timeSlot.owner = PFUser.current()!
-        timeSlot.schedule = schedule
-        
-        timeSlot.saveInBackground(block: completion)
-    }
 }
