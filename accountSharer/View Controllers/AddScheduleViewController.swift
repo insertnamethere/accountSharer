@@ -12,7 +12,7 @@ class AddScheduleViewController: UITableViewController {
 
     var schedTypes = ["Netflix", "Hulu", "Amazon", "Spotify"]
     var myIndex = 0
-    
+    var maxHoursReservable =  0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,30 @@ class AddScheduleViewController: UITableViewController {
     }
     
     @objc func save(_ sender: Any) {
-        APIManager.makeNewSchedule(type: schedTypes[myIndex])
+        APIManager.makeNewSchedule(type: schedTypes[myIndex], maxReservableHours: maxHoursReservable)
         self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func timeLimit(_ sender: Any) {
-        //apimanager stuff
+        let alert = UIAlertController(title: "time limit alert", message: "Set a time limit for your users", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: NSLocalizedString("Save", comment: "Default action"), style: .default, handler: { _ in
+            let textField = alert.textFields![0]
+            print (textField.text)
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
         
-    
+        alert.addTextField { (textField: UITextField) in
+            textField.keyboardAppearance = .dark
+            textField.keyboardType = .numberPad
+            textField.autocorrectionType = .default
+            textField.placeholder = "time limit"
+            textField.clearButtonMode = .whileEditing
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func offLimitHours(_ sender: Any) {

@@ -28,8 +28,8 @@ class APIManager {
     }
     
     
-    class func makeNewSchedule(type: String) {
-        Schedule.makeNewSchedule(type: type) {(success: Bool?, error: Error?) in
+    class func makeNewSchedule(type: String, maxReservableHours: Int) {
+        Schedule.makeNewSchedule(type: type, maxHoursReservable: maxReservableHours) {(success: Bool?, error: Error?) in
             if (success!) {
                 print("posted")
             } else {

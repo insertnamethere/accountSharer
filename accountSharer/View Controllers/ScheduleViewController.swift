@@ -30,6 +30,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
         let deleteThisSchedule = schedules[indexPath.row]
         APIManager.delSchedules(schedule: deleteThisSchedule) { (success: Bool?, error: Error?) in
             if (success!) {
