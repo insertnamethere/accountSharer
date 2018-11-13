@@ -10,15 +10,17 @@ Time spent: **X** hours spent in total
 - [x] log in/log out/persisted user
 - [x] submit a time-slot request
 - [x] show schedule for an account
+- [x] delete schedules
+- [x] delete TimeSlots
 
 The following **stretch** features are implemented:
-
+- [x] search for other user timeSlots
 - [ ] make it look nice with animations and transitions and themes
 - [x] prevent users from overlapping their own times/other times
+- [x] automatically delete expired TimeSlots
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Parse Model
 
